@@ -1,6 +1,9 @@
 import * as G from './G.js';
 import { generatePromise, getCookie, loadScript, setCookie } from './utils.js';
 
+const CLIENT_ID = '905862553602-o2qfn27n9eijlpcljp0rt7rog3gnrba8.apps.googleusercontent.com';
+// restricted to https://davidsimmerman.github.io/bird-food-calculator/
+const API_KEY = 'AIzaSyBRjwP9wnoS7j4WCp6mJAOewWDreY4wu_A';
 const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
 const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';
 let tokenClient;
