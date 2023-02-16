@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Bird Food Calculator</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./index.css" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="bird-options" class="container">
+				<div class="row">
+					<select id="bird-select" name="birdSelect" class="col">
+						<option value="calculator">Calculator</option>
+					</select>
+				</div>
+				<div class="row">
+					<button id="new-bird" class="btn btn-secondary col">New Bird</button>
+				</div>
+			</div>
+			<div id="signin" class="container pb-5 px-5">
+				<button id="signin-btn" class="btn btn-secondary col">Sign in</button>
+			</div>
+			<div id="yesterday-input" class="container">
+				<h1>Yesterday</h1>
+				<div class="row">
+					<label for="yesterday-time" class="col">Time Fed</label>
+					<input type="time" id="yesterday-time" name="yesterday-time" class="col" />
+				</div>
+
+				<div class="row">
+					<label for="yesterday-weight" class="col">Yesterday Weight (g)</label>
+					<input type="number" id="yesterday-weight" name="yesterday-weight" pattern="\d*" class="col" />
+				</div>
+
+				<div class="row">
+					<label for="yesterday-food" class="col">Yesterday Food (g)</label>
+					<input type="number" id="yesterday-food" name="yesterday-food" pattern="\d*" class="col" />
+				</div>
+			</div>
+
+			<div id="today-input" class="container">
+				<h1>Today</h1>
+				<div class="row">
+					<label for="today-time" class="col">Today Time</label>
+					<input type="time" id="today-time" name="today-time" pattern="\d*" class="col" />
+				</div>
+
+				<div class="row">
+					<label for="today-weight" class="col">Today Weight (g)</label>
+					<input type="number" id="today-weight" name="today-weight" pattern="\d*" class="col" />
+				</div>
+			</div>
+
+			<div id="tomorrow-input" class="container">
+				<h1>Tomorrow</h1>
+
+				<div class="row">
+					<label for="tomorrow-time" class="col">Tomorrow Time</label>
+					<input type="time" id="tomorrow-time" name="tomorrow-time" pattern="\d*" class="col" />
+				</div>
+
+				<div class="row">
+					<label for="target-weight" class="col">Target Weight (g)</label>
+					<input type="number" id="target-weight" name="target-weight" pattern="\d*" class="col" />
+				</div>
+			</div>
+
+			<div id="output" class="container">
+				<h1>Results</h1>
+
+				<div class="row">
+					<label for="gph" class="col">Grams per Hour</label>
+					<input type="number" id="gph" name="gph" readonly class="col" />
+				</div>
+
+				<div class="row">
+					<label for="food-to-feed" class="col">Suggested Food (g)</label>
+					<input type="number" id="food-to-feed" name="food-to-feed" readonly class="col" />
+				</div>
+
+				<div class="row">
+					<label for="overwrite-food" class="col">Actual Food (g)</label>
+					<input type="number" id="overwrite-food" name="overwrite-food" class="col" />
+				</div>
+
+				<button id="save-info" class="btn btn-primary">Save</button>
+			</div>
+
+			<script src="./js/main.js" type="module"></script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+#main {
+    width: 100%;
+    margin: 75px auto;
+    font-size: 3.5vw;
+}
+
+h1 {
+    font-size: 4.5vw;
+    font-weight: bold;
+}
+
+.container {
+    padding: 0;
+    width: 100%;
+}
+
+.row {
+    padding-bottom: 15px;
+}
+
+label {
+    margin: 0;
+}
+
+input[type=number] {
+    text-align: right;
+}
+
+button {
+    font-weight: bold !important;
+}
+
+.row {
+    max-width: 100%;
+    margin: 0;
+}
+
+#save-info {
+    width: 100%;
+    height: 7.5vw;
+    font-size: 3.5vw;
+    margin-top: 35px
+}
+
+#new-bird {
+    margin: 20px 10% 10px;
+    height: 5.5vw;
+    font-size: 2vw;
+}
+
+#bird-select {
+    font-size: 5vw;
+    text-align: center;
+}
