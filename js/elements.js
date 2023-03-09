@@ -23,5 +23,6 @@ export const outputs = {
 export const buttons = {
 	signIn: document.querySelector('#signin-btn'),
 	save: document.querySelector('#save-info'),
-	newBird: document.querySelector('#new-bird')
+	newBird: document.querySelector('#new-bird'),
+	clear: document.querySelector('#clear-info')
 };

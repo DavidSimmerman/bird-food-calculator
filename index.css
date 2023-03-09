@@ -35,7 +35,7 @@ button {
     margin: 0;
 }
 
-#save-info {
+#save-info, #clear-info {
     width: 100%;
     height: 7.5vw;
     font-size: 3.5vw;

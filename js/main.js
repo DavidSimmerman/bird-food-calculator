@@ -16,6 +16,7 @@ setup();
 
 function setup() {
 	inputs.birdOptions.style.display = 'none';
+	buttons.clear.addEventListener('click', clearInputs);
 	buttons.signIn.addEventListener('click', () => {
 		buttons.signIn.innerText = 'loading...';
 		signIn();
@@ -51,7 +52,7 @@ function updateOutput(e) {
 
 async function loadValues(birdName) {
 	let birdInfo = [];
-	document.querySelectorAll('input').forEach(input => (input.value = ''));
+	clearInputs();
 
 	if (birdName) {
 		birdInfo = (await birdMaster.getBirdInfo(birdName)) ?? [];
@@ -63,10 +64,6 @@ async function loadValues(birdName) {
 		inputs.overwriteFood.previousElementSibling.style.display = 'none';
 		buttons.save.style.display = 'none';
 	}
-
-	inputs.time.today.value = roundedDateString;
-	inputs.time.yesterday.value = roundedDateString;
-	inputs.time.tomorrow.value = roundedDateString;
 
 	if (birdInfo.length === 0) return;
 
@@ -89,6 +86,14 @@ async function loadValues(birdName) {
 	}
 
 	updateOutput();
+}
+
+function clearInputs() {
+	document.querySelectorAll('input').forEach(input => (input.value = ''));
+
+	inputs.time.today.value = roundedDateString;
+	inputs.time.yesterday.value = roundedDateString;
+	inputs.time.tomorrow.value = roundedDateString;
 }
 
 async function updateBirdList() {
